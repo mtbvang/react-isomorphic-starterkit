@@ -68,7 +68,7 @@ server.ext("onPreResponse", (request, reply) => {
 				</html>`
 			);
 
-			const webserver = process.env.NODE_ENV === "production" ? "" : "//localhost:8080";
+			const webserver = process.env.NODE_ENV === "production" ? "" : "//localhost:8084";
 			output = Transmit.injectIntoMarkup(output, reactData, [`${webserver}/dist/client.js`]);
 
 			reply(output);
